@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kafene-Login</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar-left">
+            <img src="img/logo.png" alt=""> 
+            <p>Kafene</p>
+        </div>
+        <nav>
+            <div class="orders">
+                <a href="">Orders</a>
+            </div>
+            <div class="Products">
+                <a href="">Products</a>
+            </div>
+            <div class="Users">
+                <a href="">Users</a>
+            </div>
+        </nav>
+    </div>
+    <div class="loginbox">
+        <h1>Sign In</h1>
+        <input type="text" class="username" placeholder="Enter Username" id="usernamevalid"><br>
+        <input type="password" class="password" placeholder="Enter Password"  id="Passwordvalid"><br>
+        <input type="submit" class="submit" value="Login" style="cursor: pointer;" onclick="validate()">
+        <p id="error" style="color: red;"></p>
+    </div>
+</body>
+<script src="login.js">
+       
+</script>
+</html>

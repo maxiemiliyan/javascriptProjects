@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kafene-Orders</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar-left">
+            <img src="img/logo.png" alt="">
+            <p>Kafene</p>
+        </div>
+        <nav>
+            <div class="orders1">
+                <a href="">Orders</a>
+            </div>
+            <div class="Products">
+                <a href="products.html">Products</a>
+            </div>
+            <div class="Users">
+                <a href="users.html">Users</a>
+            </div>
+            <div class="logout">
+                <a href="login.html">Log Out</a>
+            </div>
+        </nav>
+    </div>
+    
+    <div>
+        <h1 class="heading">Orders</h1>
+    </div>
+    <div >
+        <h2 class="fc1">Filters</h2>
+        <div><h3 class="fc2">Count:</h3> <span id="count" class="fc2"></span></div>
+
+        <div class="checkbox">
+            <input type="checkbox"  onchange="myFunction('New');" class="cbox" id="myCheck">  New <br>
+            <input type="checkbox" onchange="myFunction('Packed');"  class="cbox"> Packed <br>
+            <input type="checkbox" onchange="myFunction('InTransit');"  class="cbox"> inTransit <br>
+            <input type="checkbox"  onchange="myFunction('Delivered');"  class="cbox"> Delivered <br>
+            <input type="checkbox"  onchange="allnewfunction()"  class="cbox"> All <br>
+        </div>
+    </div>
+    <div class="heading1">
+        <p class="p1">ID</p><p class="p2">CUSTOMER</p><p class="p3">DATE</p><p class="p4">AMOUNT</p><p class="p5">STATUS</p>
+    </div>
+    <table id="main" class="ordertable">
+        <tbody class="viewclass">
+           
+        </tbody>
+    </table>
+
+    
+</body>
+
+<script src="orders.js">
+
+</script>
+</html>

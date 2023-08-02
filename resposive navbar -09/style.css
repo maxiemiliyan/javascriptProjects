@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("img/img.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+nav{
+    background-color: darksalmon;
+    font-size: 28px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: darkslateblue;
+}
+nav li{
+    display: inline-block;
+    margin: 0 8px;
+}
+nav a{
+    text-decoration: none;
+}
+.logo{
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+nav a:hover{
+    color: whitesmoke;
+}
+
+
+.menu-line{
+    height: 3px;
+    width: 20px;
+    background-color: darkslateblue;
+    margin: 2px 0;
+    border-radius: 2px;
+}
+.menu{
+    cursor: pointer;
+    display:none;
+}
+
+/* to find perfect size of the display(media queries standard breakpoints)
+*/
+
+@media all and (max-width:640px) {
+    nav{
+        flex-direction: column;
+    }
+    nav li{
+        display: block;
+        padding: 10px 0;
+    }
+    ul{
+        text-align: center;
+        padding: 0%;
+        display: none;
+    }
+    .logo{
+        align-self: flex-start;
+        margin: 10px 0 0 30px;
+    }
+
+    .menu{
+        cursor: pointer;
+        display:block;
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
+    .showmenu{ /* this will be added as class for ul */
+        display: block;
+    }
+}

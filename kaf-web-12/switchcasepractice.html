@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            margin: auto;
+            background-color: aqua;
+            width: 400px;
+            height: 250px;
+        }
+        .inputdiv{
+            margin: 40px;
+        }
+        #input{
+            width: 80%;
+            height: 30px;
+            padding: 5px;
+        }
+        .submit{
+            position: relative;
+            top: -20px;
+            left: 100px;
+            width: 100px;
+            height: 30px;
+        }
+        #result{
+            width: auto;
+            height: 20px;
+            position: relative;
+            left: 10px;
+            bottom: 20px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <h2>Select a city</h2>
+    <div class="inputdiv">
+        <select name="" id="input">
+            <option value="bengaluru">bengaluru</option>
+            <option value="chennai">chennai</option>
+            <option value="delhi">delhi</option>
+            <option value="mumbai">mumbai</option>
+        </select>
+    </div>
+    <div>
+        <input type="button" value="Show Stats"  class="submit">
+    </div>
+    
+    </div>
+    <script>
+        /*
+        'chennai':population = 4646732
+                    litracyRate=90.20
+                    language='Tamil'
+        'bengaluru':population = 8443675
+                    litracyRate=88.71
+                    language='Kannada'
+        'Mumbai':population = 12442373
+                    litracyRate=89.73
+                    language='Marathi'
+        'delhi':population = 16787941
+                    litracyRate=86.20
+                    language='Hindi'
+        */
+
+        const button=document.querySelector('.submit');
+        let resultdiv= document.createElement('div')
+            resultdiv.id='result';
+            document.querySelector('.main').appendChild(resultdiv);
+
+        button.addEventListener('click',displayStats)
+        function displayStats() {
+            
+            const input=document.getElementById('input')
+            const city=input.options[input.selectedIndex].value
+            let population=0,litracyRate=0,language='';
+
+            switch (city) {
+                case 'bengaluru':
+                    population = 8443675,
+                    litracyRate=88.71,
+                    language='Kannada';
+                    break;
+                    case 'chennai':
+                    population = 4646732,
+                    litracyRate=90.20,
+                    language='Tamil';
+                    break;
+                    case 'mumbai':
+                    population = 12442373,
+                    litracyRate=89.73,
+                    language='Marathi';
+                    break;
+                    case 'delhi':
+                    population = 16787941,
+                    litracyRate=86.20,
+                    language='Hindi';
+                    break;
+            }
+            let text=`The indian city of ${city} has a population of ${population}. Language spoken is ${language} and litracy rate is ${litracyRate}% `
+            
+
+            document.getElementById('result').innerHTML=text
+        }
+    </script>
+</body>
+</html>

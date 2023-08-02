@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Kafene-Products</title>
+</head>
+<body>
+    <body>
+        <div class="topbar">
+            <div class="topbar-left">
+                <img src="img/logo.png" alt="">
+                <p>Kafene</p>
+            </div>
+            <nav>
+                <div class="orders">
+                    <a href="orders.html">Orders</a>
+                </div>
+                <div class="products1">
+                    <a href="products.html">Products</a>
+                </div>
+                <div class="users">
+                    <a href="users.html">Users</a>
+                </div>
+                <div class="logout">
+                    <a href="login.html">Log Out</a>
+                </div>
+            </nav>
+        </div>
+
+        <div>
+            <h1 class="heading">Products</h1>
+        </div>
+        <div >
+            <h2 class="fc1">Filters</h2>
+            <div><h3 class="fc2">Count:</h3> <span id="count" class="fc2"></span></div>
+    
+            <div class="checkbox">
+                <input type="checkbox" value="Expired" class="cbox"   onchange="Expired();">  Expired <br>
+                <input type="checkbox" value="Low Stock" class="cbox"  onchange="lowstock(100);"> Low Stock <br>
+                <input type="checkbox" value="Low Stock" class="cbox"  onchange="AllProduct();"> All <br>
+            </div>
+        </div>
+        <div class="heading2">
+            <p class="p11">ID</p>
+            <p class="p12">Product Name</p>
+            <p class="p13">Product Brand</p>
+            <p class="p14">exp</p>
+            <p class="p15">Amt</p>
+            <p class="p16">St</p>
+        </div>
+
+        <table id="main" class="product-table">
+        <tbody class="viewclass">
+           
+        </tbody>
+</table>
+</body>
+<script src="products.js">
+
+</script>
+</html>
